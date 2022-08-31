@@ -1,0 +1,85 @@
+@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin heading-2 {
+	font-family: 'Forum', serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 80px;
+	line-height: 90px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+@mixin heading-3 {
+	font-family: 'Forum', serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 60px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+@mixin heading-mobile {
+	font-family: 'Forum', serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 40px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+@mixin btn {
+	padding: 24px 0 24px 0;
+	border-radius: 10px;
+	width: 360px;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 26px;
+	color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	letter-spacing: 2px;
+	background: $dark-red;
+	@include transition;
+	&:hover {
+		background: $font-gold;
+	}
+	&:active {
+		background: $font-gold;
+	}
+}
+
+@mixin btn--rect {
+	box-sizing: border-box;
+	padding: 16px;
+	width: 298px;
+	color: $white;
+	text-transform: capitalize;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+	border-radius: 5px;
+	display: block;
+	text-align: center;
+	&:hover {
+		background: $green;
+	}
+	&:active {
+		background: $green;
+	}
+}
+
+@mixin transition {
+	transition-property: all;
+	transition-timing-function: ease;
+	transition-duration: 500ms;
+}

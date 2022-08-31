@@ -1,0 +1,292 @@
+.welcome {
+    color: $white;
+    background-color: $black;
+}
+
+.welcome__container {
+    padding: 0 0 56px 0;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.welcome__top-wrapper {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: 1;
+    @include transition;
+}
+
+.welcome__heading {
+    @include heading-2;
+    margin-bottom: 25px;
+}
+
+.welcome__subheading {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 75px;
+    letter-spacing: 2px;
+}
+
+.welcome__link {
+    @include btn;
+}
+
+.welcome__wrapper {
+    top: 0;
+    right: 0;
+    margin-left: 30.56%;
+}
+
+.welcome__slide {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%)
+    }
+    display: none;
+}
+
+.welcome__slide.active {
+    display: block;
+    // z-index: 2;   
+}
+
+.welcome__img {
+    width: 100%;
+    height: auto;
+}
+
+/* CONTROLS*/
+
+.welcome__controls {
+    @include center;
+    justify-content: space-evenly;
+    width: 600px;
+    height: 120px;
+    background-color: $black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.welcome__digits {
+    @include center;
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+.welcome__digit {
+    @include center
+}
+
+.welcome__digit:not(:last-child) {
+    margin-right: 10px;
+}
+
+.welcome__dots {
+    @include center;
+}
+
+.welcome__dot {
+    width: 16px;
+    height: 16px;
+    background-color: $white;
+    cursor: pointer;
+        
+}
+
+.welcome__dot.active {
+    background-color: $dot-active;
+        &:hover {
+            background-color: $font-gold;
+        }
+}
+
+.welcome__dot:not(:last-child) {
+    margin-right: 25px;
+}
+
+.welcome__arrows {
+    @include center;
+}
+
+.welcome__svg:first-child {
+    margin-right: 20px;
+}
+
+.welcome__svg {
+    width: 30px;
+    height: 8px;
+    cursor: pointer;
+}
+
+
+
+/* CONTROLS*/
+
+@media(max-width: 1400px) {
+
+    .welcome__top-wrapper {
+        top: 100px;
+    }
+
+    .welcome__wrapper {
+        margin-left: 28.86%
+    }
+
+    .welcome__heading {
+        font-size: 50px;
+        line-height: 90px;
+        margin-bottom: 25px;
+    }
+
+    .welcome__subheading {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 50px;
+    }
+
+    .welcome__link {
+        width: 300px;
+        font-size: 20px;
+        line-height: 23px;
+        padding: 19px 0 18px 0;
+    }
+
+    .welcome__controls {
+        width: 100%;
+        height: 120px;
+        padding-left: 46%;
+    }
+
+}
+
+
+@media (max-width: 1024px) { 
+
+    .welcome__container {
+        padding-bottom: 56px;
+    }
+
+    .welcome__top-wrapper {
+        top: 50px;
+    }
+
+    .welcome__digits {
+        font-size: 20px
+    }
+
+    .welcome__dot {
+        width: 12px;
+        height: 12px;
+    }
+
+}
+
+
+@media (max-width: 900px) { 
+
+    .welcome__container {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 26px;
+    }
+
+    .welcome__heading {
+        @include heading-3;
+        text-align: center;
+    }
+
+    .welcome__subheading {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 47px;
+    }
+
+    .welcome__top-wrapper {
+        position: static;
+    }
+
+
+    .welcome__link {
+        display: none;
+    }
+
+    .welcome__wrapper {
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .welcome__slide {
+        &::before {
+            background: none
+        }
+    }
+
+    .welcome__controls {
+        position: static;
+        width: 401px;
+        height: 40px;
+        justify-content: space-between;
+        padding-left: 0%;
+    }
+    
+}
+
+@media (max-width: 500px) { 
+
+    .welcome__container {
+        padding-bottom: 18px;
+    }
+
+    .welcome__heading {
+        @include heading-mobile
+    }
+
+    .welcome__subheading {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .welcome__wrapper {
+        margin-bottom: 20px;
+    }
+
+    .welcome__controls {
+        width: 230px;
+        height: 40px;
+    }
+
+    .welcome__digits {
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    .welcome__dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .welcome__dot:not(:last-child) {
+        margin-right: 10px
+    }
+
+    .welcome__svg {
+        width: 20px;
+        height: 8px
+    }
+
+    .welcome__svg:first-child {
+        margin-right: 15px;
+    }
+
+}

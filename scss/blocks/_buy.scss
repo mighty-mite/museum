@@ -1,0 +1,512 @@
+.buy {
+    @include center;
+    color: $bg-dark;
+    height: 845px;
+    width: 1440px;
+    position: fixed;
+    @include transition;
+    position: fixed;
+    left: -300%;
+    z-index: 1001;
+    background-color: $white;
+}
+
+.buy__wrapper {
+    margin: 0 auto;
+    max-width: 970px;
+    display: flex;
+    position: relative;
+}
+
+.buy__left {
+    margin-right: 40px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.buy__logo {
+    width: 85px;
+    height: 41px;
+}
+
+.buy__heading-like {
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: $font-gold;
+    margin-bottom: 15px;
+}
+
+.buy__subheading {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: $dark-red;
+    position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            bottom: -10px;
+            left: 0;
+            background-color: $dark-red;
+        }
+    margin-bottom: 71px;
+}
+
+.buy__date-and-time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/*          INPUT DATE          */
+
+.buy__date {
+    width: 190px;
+    height: 45px;
+    padding: 13px 15px 12px 15px;
+    border: 1px solid $bg-dark;
+}
+
+// .buy__date::-webkit-datetime-edit-fields-wrapper {
+//     color: transparent;
+//     border: none;
+// }
+
+// .buy__date::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+// .buy__date::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+// .buy__date::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+//     color: transparent;
+// }
+
+// .buy__date::-webkit-calendar-picker-indicator {
+//     background-image: url('assets/icons/drop-down.svg');
+//     background-repeat: no-repeat;
+//     background-position: 50% 50%;
+// }
+
+// .buy__date::-webkit-datetime-edit-fields-wrapper {
+//     background: url('assets/icons/date.svg') 0 0 no-repeat
+// }
+
+/*          INPUT TIME          */
+
+.buy__time {
+    width: 190px;
+    height: 45px;
+    padding: 13px 15px 12px 15px;
+    border: 1px solid $bg-dark;
+}
+
+// .buy__time::-webkit-datetime-edit-fields-wrapper {
+//     color: transparent;
+//     border: none;
+// }
+
+// .buy__time::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+// .buy__time::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+// .buy__time::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+//     color: transparent;
+// }
+
+// .buy__time::-webkit-datetime-picker-indicator {
+//     background-image: url('assets/icons/drop-down.svg');
+//     background-repeat: no-repeat;
+//     background-position: 50% 50%;
+// }
+
+// .buy__time::-webkit-datetime-edit-fields-wrapper {
+//     background: url('assets/icons/time.svg') 0 0 no-repeat
+// }
+
+input:invalid {
+    border: 1px solid red;
+}
+
+/*          INPUT NAME          */
+
+.buy__name {
+    height: 45px;
+    padding: 13px 15px 12px 15px;
+    border: 1px solid $bg-dark;
+    margin-bottom: 20px;
+
+        // &:invalid {
+        //     border: 1px solid red;
+            
+        // }
+}
+
+/*          INPUT EMAIL          */
+
+.buy__email {
+    height: 45px;
+    padding: 13px 15px 12px 15px;
+    border: 1px solid $bg-dark;
+    margin-bottom: 20px;
+}
+
+/*          INPUT TEL          */
+
+.buy__tel {
+    height: 45px;
+    padding: 13px 15px 12px 15px;
+    border: 1px solid $bg-dark;
+    margin-bottom: 20px;
+}
+
+/*          SELECT          */
+
+.buy__select {
+    height: 45px;
+    padding: 13px 15px 12px 15px;
+    border: 1px solid $bg-dark;
+    margin-bottom: 20px;
+}
+
+
+/*          ENTRY          */
+
+.buy__entry {
+    border: 1px solid $bg-dark;
+    padding: 10px 15px 15px 15px;
+    width: 400px;
+    height: 135px;
+}
+
+.buy__entry-heading-like {
+    font-family: Forum;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: $font-gold;
+    text-transform: capitalize;
+    position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: $dark-red;
+        }
+    margin-bottom: 25px;
+}
+
+.buy__rect {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+
+.buy__num-wrapper {
+    width: 105px;
+    height: 25px;
+    display: flex;
+}
+
+.buy__btn {
+    background-color: $black;
+    color: $white;
+    border: none;
+    width: 35px;
+    height: 25px;
+}
+
+.buy__basic,
+.buy__senior {
+    all: unset;
+    width: 2em;
+    text-align: center;
+    width: 35px;
+    height: 25px;
+    box-sizing: border-box;
+    padding-left: 13px;
+}
+
+/*              RIGHT  SIDE             */
+
+
+.buy__right {
+    width: 530px;
+    padding: 25px 30px 25px 30px;
+}
+
+.buy__overview {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    margin-bottom: 2px;
+}
+
+.buy__details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.buy__descr {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: $dark-red;
+    margin-bottom: 13px;
+}
+
+.buy__details-el {
+    display: flex;
+    align-items: center;
+}
+
+.buy__details-svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+}
+
+.buy__details-text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.buy__details-el:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.buy__details-img {
+    width: 150px;
+    height: 120px;
+}
+
+/*      BUY TOTAL       */
+
+.buy__right {
+    border: 1px solid $bg-dark
+}
+
+.buy__total-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy__total-line-el {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.buy__total-num {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: $num;
+    width: 32px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: $black;
+    @include center;
+}
+
+.buy__total-type,
+.buy__total-result {
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.buy__total-num {
+    margin-right: 10px;
+}
+
+.buy__total-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 13px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        bottom: 48px;
+        left: 0;
+        background-color: $dark-red;
+    }
+}
+
+.buy__total-text {
+    font-size: 32px;
+    line-height: 37px;
+    font-weight: 400;
+}
+
+.buy__total-amount {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+}
+
+.buy__total {
+    margin-bottom: 10px;
+}
+
+/*          CARD            */
+
+.buy__card-wrapper {
+    position: relative;
+    color: $card-font;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    height: 241px;
+    margin-bottom: 26px;
+}
+
+.buy__card-front,
+.buy__card-back {
+    position: absolute;
+    width: 360px;
+    height: 211px;
+    border-radius: 5px;
+    
+}
+
+.buy__card-front {
+    background-color: $card-front;
+    background-image: url('assets/images/card.png');
+    background-repeat: no-repeat;
+    background-position: 284px 34px;
+    padding: 15px 20px;
+}
+
+.buy__card-back {
+    left: 110px;
+    top: 30px;
+    background-color: $card-back;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.buy__card-wrapper input {
+    border: 1px solid $num;
+}
+
+.buy__card-label {
+    margin-bottom: 5px;
+}
+
+.buy__card-number {
+    width: 215px;
+    height: 35px;
+}
+
+.buy__card-number,
+.buy__card-wrap {
+    margin-bottom: 10px;
+}
+
+.buy__card-month {
+    margin-right: 11px;
+}
+
+.buy__card-month,
+.buy__card-year {
+    width: 100px;
+    height: 35px;
+}
+
+.buy__card-name {
+    width: 320px;
+    height: 35px;
+}
+
+.buy__card-back-stripe {
+    width: 100%;
+    height: 45px;
+    background-color: $card-font;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.buy__card-back-cvv-text {
+    margin-right: 29px;
+    margin-bottom: 5px;
+}
+
+.buy__card-cvv {
+    width: 75px;
+    height: 35px;
+    border: 1px solid $num;
+    margin-right: 20px;
+    margin-bottom: 6px;
+}
+
+.buy__card-back-description {
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    width: 55px;
+    margin-right: 30px;
+}
+
+.buy__book {
+    width: 220px;
+    height: 45px;
+    @include center;
+    background-color: $dark-red;
+    color: $white;
+    font-size: 22px;
+    line-height: 26px;
+    border: none;
+    @include transition;
+    &:hover {
+        background: $font-gold;
+    }
+    &:active {
+        background: $font-gold;
+    }
+    margin-left: auto;
+}
+
+.buy__close {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.buy__close-svg {
+    width: 25px;
+    height: 25px;
+}
+
+.modal-overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.modal-overlay.open {
+    display: block;
+}

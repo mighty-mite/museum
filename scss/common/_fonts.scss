@@ -1,0 +1,46 @@
+/* roboto-100 - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100;
+	src: url('../../assets/fonts/Roboto-Thin.woff2') format('woff2'),
+		/* Super Modern Browsers */ url('../../assets/fonts/Roboto-Thin.woff')
+			format('woff'); /* Modern Browsers */
+}
+
+/* roboto-300 - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../../assets/fonts/roboto-v20-latin-300.woff2') format('woff2'),
+		/* Super Modern Browsers */
+			url('../../assets/fonts/roboto-v20-latin-300.woff') format('woff'); /* Modern Browsers */
+}
+/* roboto-500 - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../../assets/fonts/roboto-v20-latin-500.woff2') format('woff2'),
+		/* Super Modern Browsers */
+			url('../../assets/fonts/roboto-v20-latin-500.woff') format('woff'); /* Modern Browsers */
+}
+/* roboto-700 - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../../assets/fonts/roboto-v20-latin-700.woff2') format('woff2'),
+		/* Super Modern Browsers */
+			url('../../assets/fonts/roboto-v20-latin-700.woff') format('woff'); /* Modern Browsers */
+}
+
+@font-face {
+	font-family: 'Forum';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../assets/fonts/Forum.woff2') format('woff2'),
+		/* Super Modern Browsers */ url('../../assets/fonts/Forum.woff')
+			format('woff'); /* Modern Browsers */
+}

@@ -1,0 +1,126 @@
+.gallery {
+    background-color: $black;
+}
+
+.gallery__container {
+    padding: 75px 0 0 0;
+    color: $white;
+}
+
+.gallery__heading {
+    @include heading-2;
+    margin-bottom: 75px;
+}
+
+.gallery__outer-container {
+    height: 1960px;
+    overflow-y: hidden;
+}
+
+.gallery__inner-container {
+    position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, #000000 69%);
+        }
+
+    column-count: 3;
+    column-width: 456px;
+    column-gap: 36px;
+}
+
+.gallery__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    @include transition;
+    opacity: 0;
+    transform: translateY(80px) scale(0.95)
+}
+
+.gallery__img.active {
+    opacity: 1;
+    transform: translateY(0) scale(1)
+}
+
+@media (max-width: 1500px) {
+
+    .gallery__container {
+        padding-top: 60px;
+        height: 1460px;
+        overflow: hidden;
+    }
+
+    .gallery__heading {
+        font-size: 50px;
+        line-height: 75px;
+        margin-bottom: 60px;
+    }
+
+    .gallery__inner-container {   
+        column-count: 3;
+        column-width: 304px;
+        column-gap: 36px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .gallery__container {
+        height: 1220px;
+        overflow: hidden;
+        padding-top: 40px;
+    }
+
+    .gallery__heading {
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 40px;
+    }
+
+    .gallery__inner-container {   
+        column-count: 2;
+        column-width: 352px;
+        column-gap: 24px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .gallery__container {
+        height: 754px;
+        overflow: hidden;
+    }
+
+    .gallery__heading {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .gallery__inner-container {   
+        column-width: 178px;
+    }
+}
+
+@media (max-width: 419px) {
+
+    .gallery__container {
+        height: 754px;
+        overflow: hidden;
+    }
+
+    .gallery__heading {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .gallery__inner-container {   
+        column-width: 120px;
+    }
+}
