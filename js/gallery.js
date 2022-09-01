@@ -40,15 +40,15 @@ addPictures();
 const sliderImages = document.querySelectorAll('.gallery__img');
 
 function debounce(func, wait = 20, immediate = true) {
-	var timeout;
+	let timeout;
 	return function () {
-		var context = this,
+		let context = this,
 			args = arguments;
-		var later = function () {
+		let later = function () {
 			timeout = null;
 			if (!immediate) func.apply(context, args);
 		};
-		var callNow = immediate && !timeout;
+		let callNow = immediate && !timeout;
 		clearTimeout(timeout);
 		timeout = setTimeout(later, wait);
 		if (callNow) func.apply(context, args);
@@ -59,7 +59,7 @@ function checkSlide() {
 	sliderImages.forEach((sliderImage) => {
 		// half way through the image
 		const slideInAt =
-			window.scrollY + window.innerHeight - sliderImage.height / 15;
+			window.scrollY + window.innerHeight - sliderImage.height / 75;
 		// bottom of the image
 		const imageBottom =
 			sliderImage.getBoundingClientRect().top +
@@ -68,9 +68,8 @@ function checkSlide() {
 
 		const isHalfShown =
 			slideInAt > sliderImage.getBoundingClientRect().top + window.scrollY;
-		const isNotScrolledPast = window.scrollY < imageBottom;
 
-		if (isHalfShown && isNotScrolledPast) {
+		if (isHalfShown) {
 			sliderImage.classList.add('active');
 		} else {
 			sliderImage.classList.remove('active');
