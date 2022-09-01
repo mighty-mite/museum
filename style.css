@@ -475,7 +475,6 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
 }
 
 .header__logo-svg {
@@ -555,7 +554,6 @@ h3 {
     -webkit-transition-duration: 500ms;
             transition-duration: 500ms;
     width: 297px;
-    height: 585px;
     padding: 35px 120px 0 55px;
   }
   .header__list {
@@ -605,8 +603,8 @@ h3 {
   }
   .header__menu {
     padding: 15px 35px 0 35px;
-    height: 841px;
-    width: 100%;
+    height: calc(100vh - 55px);
+    width: 100vw;
     background-color: #000000;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -990,7 +988,7 @@ h3 {
     height: 12px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .welcome__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3090,7 +3088,7 @@ h3 {
   cursor: pointer;
   position: absolute;
   top: 56px;
-  right: 0;
+  right: 27px;
 }
 
 .burger__btn {

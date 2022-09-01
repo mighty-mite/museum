@@ -7,7 +7,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	position: relative;
+	// position: relative;
 }
 
 .header__logo-svg {
@@ -72,7 +72,7 @@
 		background: $black;
 		@include transition;
 		width: 297px;
-		height: 585px;
+		// height: 585px;
 		padding: 35px 120px 0 55px;
 		// transition-property: all;
 		// transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
@@ -148,8 +148,8 @@
 
 	.header__menu {
 		padding: 15px 35px 0 35px;
-		height: 841px;
-		width: 100%;
+		height: calc(100vh - 55px);
+		width: 100vw;
 		background-color: $black;
 
 		display: flex;
