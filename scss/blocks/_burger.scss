@@ -1,47 +1,41 @@
 .burger {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 56px;
-    right: 0;
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	top: 56px;
+	right: 0;
 }
 
 .burger__btn {
-    display: none;
+	display: none;
 }
 
 .burger__exit {
-    display: none;
+	display: none;
 }
 
 @media (max-width: 1024px) {
+	.burger {
+		display: block;
+	}
 
-    .burger {
-        display: block;
-    }
-    
-    .burger__btn {
-        display: block;
-    }
-    
-    .burger__exit {
-        display: none;
-    }
-    
+	.burger__btn {
+		display: block;
+	}
+
+	.burger__exit {
+		display: none;
+	}
 }
 
 @media (max-width: 768px) {
-
-    .burger {
-        top: 46px;;
-    } 
-   
+	.burger {
+		top: 46px;
+	}
 }
 
 @media (max-width: 420px) {
-
-    .burger {
-        top: 36px;;
-    } 
-   
+	.burger {
+		top: 36px;
+	}
 }

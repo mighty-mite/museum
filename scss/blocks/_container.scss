@@ -1,33 +1,30 @@
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    // outline: 1px dotted gray
+	max-width: 1440px;
+	margin: 0 auto;
+	// outline: 1px dotted gray
 }
 
 @media (max-width: 1500px) {
-    
-    .container {
-        max-width: 96.09375%;
-    }
+	.container {
+		max-width: 96.09375%;
+	}
 }
 
 // @media (max-width: 1024px) {
-    
+
 //     .container {
 //         max-width: 984px;
 //     }
 // }
 
 @media (max-width: 768px) {
-    
-    .container {
-        max-width: 94.7917%;
-    }
+	.container {
+		max-width: 94.7917%;
+	}
 }
 
 @media (max-width: 600px) {
-    
-    .container {
-        max-width: 90.47619%;
-    }
+	.container {
+		max-width: 90.47619%;
+	}
 }

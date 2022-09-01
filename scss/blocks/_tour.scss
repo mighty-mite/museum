@@ -1,16 +1,14 @@
-
-
 .tour__map {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
 }
 
-.tour__map iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+.tour__map iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
