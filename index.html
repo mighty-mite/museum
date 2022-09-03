@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
@@ -264,43 +265,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="video__slider">
-                    <div class="video__row">
-                        <div class="video__wrap">
-                            <iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/zp1BXPX8jcU?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="video__wrap">
-                            <iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="video__wrap">
-                            <iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/NOhDysLnTvY?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div>
-                        <!-- <div class="video__wrap">
-                            <iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="video__wrap">
-                            <iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/2OR0OCr6uRE?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div> -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide"><iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/zp1BXPX8jcU?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe></div>
+                      <div class="swiper-slide"><iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe></div>
+                      <div class="swiper-slide"><iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/NOhDysLnTvY?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe></div>
+                      <div class="swiper-slide"><iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe></div>
+                      <div class="swiper-slide"><iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/2OR0OCr6uRE?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe></div>
                     </div>
-                </div>
-                <div class="video__dots">
+                  </div>
+                  <div class="video__dots">
                     <svg class="video__arrow video__prev">
                         <use xlink:href="assets/icons/sprite.svg#double-arrow-left"></use>
                     </svg>
-                    <div class="video__dot active"></div>
-                    <div class="video__dot"></div>
-                    <div class="video__dot"></div>
-                    <div class="video__dot"></div>
-                    <div class="video__dot"></div>
+                    <div class="video__bullets-container">
+                    </div>
                     <svg class="video__arrow video__next">
                         <use xlink:href="assets/icons/sprite.svg#double-arrow-right"></use>
                     </svg>
                 </div>
+
             </div>
         </section>
         <section class="gallery" id="gallery">
@@ -588,6 +579,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/welcome.js"></script>
     <script src="js/explore.js"></script>
     <script src="js/gallery.js"></script>

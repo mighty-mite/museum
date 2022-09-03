@@ -1,31 +1,49 @@
-// const videoContainer = document.querySelector('.video__slider'),
-//       videoSlider = document.querySelector('.video__row'),
-//       prevBtn = document.querySelector('.video__prev'),
-//       nextBtn = document.querySelector('.video__next');
+const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
 
-// let videoSlides = document.querySelectorAll('.video__item');
-// let idx = 1;
+	// If we need pagination
+	pagination: {
+		el: '.video__bullets-container',
+		type: 'bullets',
+		clickable: true,
+	},
 
-// const firstClone = videoSlides[0].cloneNode(true);
-// const lastClone = videoSlides[videoSlides.length - 1].cloneNode(true);
-
-// firstClone.id = 'first clone';
-// lastClone.id = 'last clone';
-
-// videoSlider.append(firstClone);
-// videoSlider.prepend(lastClone);
-
-// let slideWidth = videoSlides[0].clientWidth;
-// let margin = window.getComputedStyle(videoSlides[0], null).getPropertyValue('margin-right');
-
-// videoSlider.style.transform = `translateX(${-slideWidth * idx - margin}px)`;
-
-// function nextSlide() {
-//     idx++;
-//     videoSlider.style.transform = `translateX(${-slideWidth * idx - margin}px)`
-// }
-
-// nextBtn.addEventListener('click', nextSlide);
+	// Navigation arrows
+	navigation: {
+		nextEl: '.video__next',
+		prevEl: '.video__prev',
+	},
+	grabCursor: true,
+	simulateTouch: true,
+	breakpoints: {
+		320: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		// when window width is >= 420px
+		420: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		// when window width is >= 768
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		// when window width is >= 640px
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 41,
+		},
+		// when window width is >= 1920px
+		1920: {
+			slidesPerView: 3,
+			spaceBetween: 42,
+		},
+	},
+});
 
 /*          CUSTOM PLAYER               */
 
@@ -132,26 +150,6 @@ function paintVolumeBar() {
 progressBar.addEventListener('input', paintProgressBar);
 volumeBar.addEventListener('input', paintVolumeBar);
 
-// document.addEventListener("keydown", function(e) {
-//     if (e.keyCode == 77) {
-//         volumeBtn.classList.toggle('inactive');
-//         muteBtn.classList.toggle('active');
-//     }
-
-//     if (video.volume !== 0) {
-
-//         video.volume = 0;
-//         volumeBar.value = 0;
-//         volumeBar.style.background ='#C4C4C4'
-//     } else {
-
-//         video.volume = 0.5;
-//         volumeBar.value = 50;
-//         volumeBar.style.background = `linear-gradient(to right, #710707 0%, #710707 50%, #C4C4C4 50%, #C4C4C4 100%)`;
-//     }
-
-//   }, false);
-
 /*            FULLSCREEN              */
 // const fullscreen = document.querySelector('.video__icon-full');
 const fullscreenContainer = document.querySelector('.video__fullscreen-btns');
@@ -187,32 +185,27 @@ function fullscreenInAndOut() {
 
 videoPlayer.addEventListener('fullscreenchange', fullscreenInAndOut);
 
-// document.addEventListener("keydown", function(e) {
-//     if (e.keyCode == 70) {
-//       toggleFullScreen();
-//       fullscreenInAndOut()
-//     }
-//   }, false);
+videoPlayer.addEventListener('focusin', () => {
+	document.addEventListener(
+		'keydown',
+		(e) => {
+			if (e.key === 'f' || e.key === 'а') {
+				toggleFullScreen();
+				fullscreenInAndOut();
+			}
 
-document.addEventListener(
-	'keydown',
-	(e) => {
-		if (e.key === 'f' || e.key === 'а') {
-			toggleFullScreen();
-			fullscreenInAndOut();
-		}
+			if (e.key === ' ') {
+				e.preventDefault();
+				togglePlay();
+			}
 
-		if (e.key === ' ') {
-			e.preventDefault();
-			togglePlay();
-		}
-
-		if (e.key === 'm' || e.key === 'ь') {
-			handleMute();
-		}
-	},
-	false
-);
+			if (e.key === 'm' || e.key === 'ь') {
+				handleMute();
+			}
+		},
+		false
+	);
+});
 
 function runOnKeys(func, ...codes) {
 	let pressed = new Set();
@@ -265,3 +258,7 @@ function decreasePlaybackRate() {
 runOnKeys(increasePlaybackRate, 'ShiftLeft', 'Period');
 
 runOnKeys(decreasePlaybackRate, 'ShiftLeft', 'Comma');
+
+document.querySelector('.swiper').addEventListener('click', (e) => {
+	console.log(e.target.classList);
+});
