@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scss/style.css">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
     <title>Louvre</title>
@@ -266,9 +266,7 @@
                     </div>
                 </div>
                 <div class="swiper">
-                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
-                      <!-- Slides -->
                       <div class="swiper-slide"><iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/zp1BXPX8jcU?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe></div>
                       <div class="swiper-slide"><iframe class="video__item" loading="lazy" src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -315,7 +313,7 @@
                         media="(min-width: 768px)">
                         <img src="assets/images/tickets-pic-420.jpg" alt="picture" class="tickets__pic">
                     </picture>
-                <form action="URL" class="tickets__form">
+                <div class="tickets__form">
                     <div class="tickets__inputs">
                         <div class="tickets__radios">
                             <p class="tickets__heading-3 tickets__heading-3--type">Ticket type</p>
@@ -350,7 +348,7 @@
                         <p class="tickets__total">Total €<span class="tickets__total-amount">220</span></p>
                         <button class="tickets__button">Buy Now</button>
                     </div>
-                </form>
+                </div>
             </div>
             </div>
         </section>
@@ -405,7 +403,7 @@
                     </div>
                     <input type="text" class="buy__name" placeholder="Name" pattern="[A-Za-zА-ЯА-я\s]{3,15}" required title="Username can only contain letters, numbers, and underscores, and must contain 3 to 15 characters">
                     <input type="email" class="buy__email" placeholder="E-mail" pattern="[\.a-zA-Z_-]{3,15}@[a-zA-Z]{4,}.[a-zA-z]{2,}" title="Email pattern: username@example.com" required>
-                    <input type="tel" class="buy__tel" placeholder="Phone" pattern="\d{3,15}" title="phone number length must contain 3 to 15 characters" required>
+                    <input type="tel" class="buy__tel" placeholder="Phone"  title="phone number length must contain 3 to 15 characters" required>
                     <select name="ticket-type" id="select" class="buy__select">
                         <option value="Permanent exhibition">Permanent exhibition</option>
                         <option value="Temporary exhibition">Temporary exhibition</option>
@@ -483,16 +481,16 @@
                         <div class="buy__card-back">
                             <div class="buy__card-back-stripe"></div>
                             <p class="buy__card-back-cvv-text">CVC/CVV</p>
-                            <input type="text" class="buy__card-cvv">
+                            <input pattern="\d{3}" maxlength="3" type="text" class="buy__card-cvv">
                             <p class="buy__card-back-description">The last<br> 3 or 4 digits on back<br> of the card</p>
                         </div>
                         <div class="buy__card-front">
                             <p class="buy__card-label">Card number</p>
-                            <input type="text" class="buy__card-number">
+                            <input maxlength="16" placeholder="1234-5678-9012-3456" type="text" class="buy__card-number">
                             <p class="buy__card-label">Expiration date</p>
                             <div class="buy__card-wrap">
-                                <input type="text" class="buy__card-month">
-                                <input type="text" class="buy__card-year">
+                                <input maxlength="2" pattern="\d{2}\" type="text" class="buy__card-month">
+                                <input maxlength="2" pattern="\d{2}\" type="text" class="buy__card-year">
                             </div>
                             <p class="buy__card-label">Cardholder name</p>
                             <input type="text" class="buy__card-name">
