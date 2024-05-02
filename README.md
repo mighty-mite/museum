@@ -1,6 +1,6 @@
 # shelter
 
-The pet adoption website
+Louvre museum website
 (learning project in RSSchool)
 https://rs.school/
 
