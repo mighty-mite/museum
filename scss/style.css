@@ -1794,14 +1794,6 @@ h3 {
     height: 5px;
     width: 16%;
   }
-  .video__icon-vol {
-    width: 26px;
-    height: 20px;
-  }
-  .video__icon-full {
-    width: 26px;
-    height: 26px;
-  }
 }
 @media (max-width: 768px) {
   .video__container {
@@ -1837,7 +1829,7 @@ h3 {
     width: 100%;
   }
   .video__ctrl-vol {
-    width: 73%;
+    width: 60%;
   }
   .video__play-btn {
     top: 43%;
@@ -1864,14 +1856,44 @@ h3 {
   .video__icon-play {
     width: 14px;
     height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .video__icon-pause {
+    width: 14px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .video__icon-vol {
     width: 18px;
     height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .video__icon-mute {
+    width: 18px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .video__icon-full {
     width: 18px;
     height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .video__icon-full-exit {
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .video__ctrl-vid,
   .video__ctrl-vol {

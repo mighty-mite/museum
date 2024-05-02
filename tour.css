@@ -15,3 +15,15 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
+
+.tour__map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+body {
+  margin: 0;
+}
