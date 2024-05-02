@@ -1,50 +1,3 @@
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: ".video__bullets-container",
-    type: "bullets",
-    clickable: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".video__next",
-    prevEl: ".video__prev",
-  },
-  grabCursor: true,
-  simulateTouch: true,
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    // when window width is >= 420px
-    420: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    // when window width is >= 768
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    // when window width is >= 640px
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 41,
-    },
-    // when window width is >= 1920px
-    1920: {
-      slidesPerView: 3,
-      spaceBetween: 42,
-    },
-  },
-});
-
 /*          CUSTOM PLAYER               */
 
 const video = document.querySelector(".video__player");
@@ -152,7 +105,6 @@ progressBar.addEventListener("input", paintProgressBar);
 volumeBar.addEventListener("input", paintVolumeBar);
 
 /*            FULLSCREEN              */
-// const fullscreen = document.querySelector('.video__icon-full');
 const fullscreenContainer = document.querySelector(".video__fullscreen-btns");
 const fullscreenOn = document.querySelector(".video__icon-full");
 const fullscreenOff = document.querySelector(".video__icon-full-exit");
@@ -259,7 +211,3 @@ function decreasePlaybackRate() {
 runOnKeys(increasePlaybackRate, "ShiftLeft", "Period");
 
 runOnKeys(decreasePlaybackRate, "ShiftLeft", "Comma");
-
-document.querySelector(".swiper").addEventListener("click", (e) => {
-  console.log(e.target.classList);
-});
