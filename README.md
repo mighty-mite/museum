@@ -1,4 +1,4 @@
-# shelter
+# louvre
 
 Louvre museum website
 (learning project in RSSchool)
